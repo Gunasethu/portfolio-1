@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M2P Fintech</title>
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="icon" type="image/x-icon" href="Images/m2p-logo.png">
+</head>
+<body onload="daysDifference()" data-new-gr-c-s-check-loaded="14.1087.0" data-gr-ext-installed="" class="font-inter">
+    <!--navbar-->
+        <nav class="md:border-gray-200 md:border-b">
+            <div class="max-w-4xl mx-auto px-4 md:px-4 border-gray-200 border-b md:border-0">
+                <div class="flex justify-between">
+                    
+                    <div class="flex space-x-2 md:space-x-4">
+                        <a class="flex items-center py-5 px-2 md:px-0 text-gray-700 hover:text-gray-900" href="index.html">
+                            <h1 class=" text-lg md:text-xl border-violet-600">gunasethu</h1>
+                        </a>
+                        <!-- no of days since started design -->
+                        <!--   <div class="justify-center my-8 select-none flex"> 
+                            
+                                <a href="#" class="transition duration-150 ease-in-out" data-bs-toggle="tooltip" title="No of days since I started my design journey (first internship). As a reminder of how far I have come :)">
+                                <h3 id="result" class="py-2 px-3 no-underline rounded-full bg-blue text-purple-900 text-xs bg-purple-200">843 days</h3>
+    
+                                </a>
+                          </div> -->
+                    </div>
+                        
+                    
+    
+                    <div class="hidden md:flex items-center space-x-1 transition ease-in-out duration-300 ">
+                        <a href="index.html" class="flex space-x-2 item py-5 px-3 text-gray-500 hover:text-violet-600 text-sm">
+                            <!-- <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg> -->
+                            <h3>Work</h3>
+                        </a>
+                        <a href="#work" class="flex space-x-2 py-5 px-3 text-gray-500 hover:text-violet-600 text-sm">
+                            <!-- <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> -->
+                            <h3>About</h3>
+                        </a>
+                        <a href="notes.html" class="flex space-x-2 py-5 px-3 text-gray-500 hover:text-violet-600 text-sm">
+                            <!-- <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg> -->
+                            <h3>Resume</h3>
+                        </a>
+                    </div>
+                    <div class="mobile-menu-button md:hidden flex items-center">
+                        <button onclick="myFunction()">
+                            <svg class="w-6 h-6" id="ham-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                            <svg class="w-6 h-6" id="close-icon" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu" style="display:none;" class="py-2 transition ease-in-out duration-300 m-3 border rounded-md">
+                <a href="about.html" class="flex space-x-2 items-center block py-3 px-5 text-sm text-gray-500 hover:text-violet-600">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                    <h3>About</h3>
+                </a>
+                <a href="#work" class="flex space-x-2 block py-3 px-5 text-sm text-gray-500 hover:text-violet-600">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <h3>Work</h3>
+                </a>
+                <a href="notes.html" class="flex space-x-2 block py-3 px-5 text-sm text-gray-500 hover:text-violet-600">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                    <h3>Notes</h3>
+                </a>
+            </div>
+        </nav>
+        
+    <!--header section-->
+    <section class="mt-4 md:mt-12 px-6 md:px-4 max-w-4xl bg-white mx-auto ">
+        <div class="space-y-2">
+        <h1 class="text-2xl leading-normal md:text-3xl md:leading-tight ">
+           Work at M2P Fintech
+        </h1>
+    
+        <p class="text-base pt-4 text-gray-600"> Role: Research, Visual design, User testing</p>
+        <p class="text-base -mt-2px text-gray-600 "  style="margin-top: -0.2px;"> Team project</p>
+        <h1 class="pt-4 text-xl">An end-to-end visual redesign of a forex portal with goal of increasing customer satisfaction, engagement, effectivenss and loyality.
+        </h1>
+        </div>
+        
+        <img src="Images/cover.png" alt="" class="mt-12 md:block">
+    </section>
+    
+    <section class="mt-4 md:mt-8 px-6 md:px-4 max-w-4xl bg-white mx-auto ">
+        <h1 class="pt-4 text-xl">M2P forex management platform </h1>
+        <p class="text-base pt-4 md:text-base" >M2P has its platform called Forex portal which is a tool that enables banks & corporates to issue prepaid forex cards to their consumers for expenses in local currency when they travel abroad. </p>
+        <p class="text-base pt-4 md:text-base" >M2P provides all the necessary infrastructure to onboard, manage the program and issue Forex cards to the users on behalf of the banks/corporates.</p>
+        
+                
+        <img src="Images/old design.png" alt="" class="mt-12 md:block">
+        <p class="text-base pt-4 mt-4 md:text-base" >The portal was designed back in 2015 and it wasn’t updated then. The business team regularly received plenty of queries, new changes, and complaints from the banks.</p>
+        <p class="text-base pt-4 md:text-base" >M2P’s user base and global scale expand from day to day. So there was an immediate need to ensure provide a seamless experience for the banks who use the tool that can hold up with that rapid growth.</p>
+        
+        <p class="text-base py-4 md:text-base" > This also helps keep the loyalty of the existing users and attract new users from the market.</p>
+        
+        <!-- Defining the problem -->
+        <h1 class="pt-4 text-xl">Defining the problem  </h1>
+        <p class="text-base pt-4 md:text-base"> To understand the problem space, we conducted user interviews with 10 participants from the banks such as SBI, ICICI, Axis, etc. Due to the time crunch, we limited the users to 10. The business team helped us to connect with the right user for user interviews with banks and agencies. Each session lasted for 45-60 minutes. </p> 
+        <!-- Research finding img -->
+        <img src="Images/stickynotes.png" alt="" class="mt-12 md:block">
+         <p class="text-base pt-4 md:text-base">We gained a lot of information from the interviews that allowed us to comprehend the problem area and proceed. I sat down with the team, evaluated the user interview findings, and then ranked them in order of the importance of the issue.</p>
+         <p class="text-base pt-4 md:text-base">Problems identified:
+        </p>
+         <ul style="list-style-type: disc; padding-top: 8px; list-style-position: inside;">
+            <li >Users have a difficult time interacting with the current portal. This is in terms of information hierarchy, navigation and visual design</li>
+            <li> Current tool lacks glancable information in the interface.</li>
+            <li>Accessibility and usability issues</li>
+            <li>Lots of unused features wasting space</li>
+            <li>Accessbiity and usuabliity issues</li>
+            <li>Lots of manual tasks which can be automated</li>
+            <li>Lots of confusion and uncertainty while filling forms </li>
+          </ul>
+        
+          <!-- card sorting img-->
+        
+        <h1 class="pt-4 mt-4 text-xl">Validating through card sorting</h1>
+        <p class="text-base pt-4 md:text-base">We wanted to test & evaluate how users understand the current information architecture. For that, we choose to do open card sorting session with 3 bank users. </p>
+        <img src="Images/ia.png" alt="" class="mt-4 md:block">
+        <p class="text-base pt-4 md:text-base">The outcome was participants grouped the cards differently compared to the existing flows and a few of them were confused about the position or failed to label the cards. So through this we were able to find out that the present design was different from how the users expected to see the set of information.</p>
+
+        <!-- Frequency and value img -->
+        <!-- <img src="Images/matrix.png" alt="" class="pt-4 md:block"> -->
+        <img src="Images/new menu.png" alt="" class="pt-4 md:block" > 
+        <p class="text-base pt-4 md:text-base">Using the frequency vs value matrix I prioritized the flows and shown the important tasks in the main menu and moved sub-tasks to the relevant categories. As a result, left menu's navigation became simpler and required less clicks. After receiving some input and making a few modifications, the team approved the revised flow.</p>
+        <p class="text-base pt-4 md:text-base">This was particularly challenging and tricky since disrupting a pattern that individuals have grown accustomed to could frustrate them. Most people dislike change. Therefore, it was crucial for us to develop adjustments that don't take a long time to settle down and minimise the learning curves as much as possible.</p>
+        
+
+        <!-- Form section -->
+        <h1 class="pt-4 mt-4 text-xl">Making long form filling process effortless</h1>
+        <p class="text-base pt-4 md:text-base">We have observed lot of issues with the current form that made form filling process more tedious for the users. We dissected the problems one by one and gave a visual overhaul to the entire form to make the form filling process less intimitading and effortless</p>
+        <img src="Images/newform.png" alt="" class="mt-12 md:block">
+        <h1 class="pt-4 text-xl">How we did?</h1>
+        <p class="text-base pt-4 md:text-base">Filling Long forms is always intimating and they look like they require a lot of effort to complete (and they do). We wanted to try simplifying forms somewhat by cutting unimportant fields, but most of them are essential and unavoidable. </p>
+        <p class="text-base pt-4 md:text-base">One of the obvious way to make the long process short is to make them fill the form by using categories with the stepper. But that idea couldn’t work here since the users wanted to quickly glance the information, makes changes & verify refering one data with other. </p>
+        <p class="text-base pt-4 md:text-base">One of the way we decided to go is regrouping the form and removing any reduntant fields and automate the tasks if feasible.</p>
+        <!-- Form regrouping 2 img -->
+        <img src="Images/regrouping.png" alt="" class="mt-12 md:block" > 
+        <!-- <img src="Images/newgroup.png" alt="" class="pt-4 md:block" >  -->
+        <p class="text-base pt-4 md:text-base">We regrouped the entire form sections, removed reduntant fields(if any), gave appropiate lables for easy understanding. Despite the fact that we ended up adding more sections, it was simple to scan and comprehend.</p>
+        <p  style="padding-top: 8px;"><a href="" style="text-decoration-line: underline;">View Detailed process</a> </p>
+
+
+
+        <h1 class="pt-4 mt-4 text-xl">Giving well-designed table experience to users </h1>
+        <p class="text-base pt-4 md:text-base">The daily tasks of users often involve working with tabular data. Users found it challenging to work with tables due to a lack of flexibility, problems with broken alignment, a lack of consistency, and incorrect information hierarchies. Therefore to solve, we researched some of the best practises for table design, gathered patterns, and revised the table.</p>
+        <p class="text-base pt-4 md:text-base">By far the biggest challenge was to ensure that table appeared visually simple, even when dense with information and content. </p>
+        <img src="Images/newtable.png" alt="" class="mt-12 md:block" > 
+        <p  style="padding-top: 8px;"><a href="" style="text-decoration-line: underline;">View Detailed process</a> </p>
+
+
+        <!-- Whole images -->
+        <h1 class="pt-4 mt-4 text-xl">Redesigning that provides right value</h1>
+        <p class="text-base pt-4 md:text-base">In a similar manner, we made changes in areas where there was room for improvements. We took three months to do the entire project. Validating ideas with users at every point became a crucial ritual in our design process</p>
+        <img src="Images/wholepics.png" alt="" class="pt-4 md:block" > 
+        <img src="Images/mac.png" alt="" class="pt-4 md:block" > 
+        <p class="text-xs" style="color:#94A3B8; padding-top:6px">Glimpse of works</p>
+
+        <!-- Design system -->
+        <h1 class="pt-4 mt-12 text-xl">Stiching everything using M2P design system</h1>
+        <p class="text-base pt-4 md:text-base">Collaboarding with Design system head becomes routine for us to make sure we’re consistent with brand and on the same page in terms of what components to use.</p>
+        <p class="text-base pt-4 md:text-base">I also contributed in creating few components. We looked across Material design, Atlassian design system (because they’re consistent and well-documented) as well as building on top of the current suite of M2P design system.</p>
+        <img src="Images/ds.png" alt="" class="pt-4 md:block">
+        
+        <!-- Reflectiom -->
+        <h1 class="pt-4 mt-4 text-xl">Reflection</h1>
+        <p class="text-base pt-4 md:text-base">Due to some business reasons, the project was put on hold before develpment and then I was moved to different project. So I was not able to see the redesign go live. </p>
+        <p class="text-base pt-4 md:text-base">Looking back, I've come to understand how crucial it is to sweat even the smallest aspects because doing so might make the users work so much simpler. I also learned from this experience how to communicate early and to ask any questions or doubts I may have had through the process.</p>
+
+    </section>
+
+    <!--Contact-->
+    <section id="contact" class="  mt-16 md:mt-20 mb-6 ">
+        <!-- <h1 class=" mb-6 md:mb-8 text-xl   px-6 max-w-4xl bg-white mx-auto md:px-4  md:text-3xl">Thanks for <s>stalking</s> dropping by</h1> -->
+        <div class="border-t border-gray-200 py-4 space-y-2 md:space-y-0 md:flex md:space-x-4 px-6 text-sm max-w-4xl bg-white mx-auto md:px-4  md:text-base">
+           <!--  <a href="https://twitter.com/anuragkrishh" target="_blank" class="flex ">
+                <h3 class="text-sm md:text-base border-b border-gray-600 hover:text-violet-600 hover:border-violet-600">Bird App</h3>
+            </a> -->
+            
+            <a href="https://twitter.com/Gunasethu197" target="_blank" class="flex ">
+                <h3 class="text-sm md:text-base hover:text-violet-600 hover:border-violet-600">Twitter</h3>
+            </a>
+            <a href="https://www.linkedin.com/in/gunasethu/" target="_blank" class="flex ">
+                <h3 class="text-sm md:text-base hover:text-violet-600 hover:border-violet-600">LinkedIn</h3>
+            </a>
+            <a href="mailto: gunasethu@gmail.com" target="_blank" class="flex ">
+                <h3 class="text-sm md:text-base hover:text-violet-600 hover:border-violet-600">gunasethu197@gmail.com</h3>
+            </a>
+        </div>
+    </section>
+    <footer class="py-6 ">
+        <div class="space-y-2 md:space-y-0 md:flex px-6 max-w-4xl bg-white mx-auto md:px-4 justify-between">
+        <h3 class="text-sm md:text-base">© Gunasethu</h3>
+        <!-- <h3 class="text-sm md:text-base">Made with coffee and a pinch of imposter syndrome    </h3> -->
+    </div>
+    </footer>
+    <script>
+        function myFunction() {
+        var x = document.getElementById("mobile-menu");
+        var ham = document.getElementById("ham-icon");
+        var close = document.getElementById("close-icon");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            ham.style.display = "none";
+            close.style.display = "block";
+        } else {
+            x.style.display = "none";
+            ham.style.display = "block";
+            close.style.display = "none";
+        }
+        }     
+    </script>
+    
+    </body>
+</html>

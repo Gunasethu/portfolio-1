@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunasethu - Product designer</title>
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="icon" type="image/x-icon" href="Images/G.png">
+
+</head>
+<body onload="daysDifference()" data-new-gr-c-s-check-loaded="14.1087.0" data-gr-ext-installed="" class="font-inter">
+    <!--navbar-->
+        <nav class="md:border-gray-200 md:border-b">
+            <div class="max-w-4xl mx-auto px-4 md:px-4 border-gray-200 border-b md:border-0">
+                <div class="flex justify-between">
+                    
+                    <div class="flex space-x-2 md:space-x-4">
+                        <a class="flex items-center py-5 px-2 md:px-0 text-gray-700 hover:text-gray-900" href="index.html">
+                            <h1 class=" text-lg md:text-xl border-violet-600">gunasethu</h1>
+                        </a>
+                        <!-- no of days since started design -->
+                        <!--   <div class="justify-center my-8 select-none flex"> 
+                            
+                                <a href="#" class="transition duration-150 ease-in-out" data-bs-toggle="tooltip" title="No of days since I started my design journey (first internship). As a reminder of how far I have come :)">
+                                <h3 id="result" class="py-2 px-3 no-underline rounded-full bg-blue text-purple-900 text-xs bg-purple-200">843 days</h3>
+    
+                                </a>
+                          </div> -->
+                    </div>
+                        
+                    
+    
+                    <div class="hidden md:flex items-center space-x-1 transition ease-in-out duration-300 ">
+                        <a href="index.html" class="flex space-x-2 item py-5 px-3 text-gray-500 hover:text-violet-600 text-sm">
+                            <!-- <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg> -->
+                            <h3>Work</h3>
+                        </a>
+                        <a href="#work" class="flex space-x-2 py-5 px-3 text-gray-500 hover:text-violet-600 text-sm">
+                            <!-- <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> -->
+                            <h3>About</h3>
+                        </a>
+                        <a href="notes.html" class="flex space-x-2 py-5 px-3 text-gray-500 hover:text-violet-600 text-sm">
+                            <!-- <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg> -->
+                            <h3>Resume</h3>
+                        </a>
+                    </div>
+                    <div class="mobile-menu-button md:hidden flex items-center">
+                        <button onclick="myFunction()">
+                            <svg class="w-6 h-6" id="ham-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                            <svg class="w-6 h-6" id="close-icon" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu" style="display:none;" class="py-2 transition ease-in-out duration-300 m-3 border rounded-md">
+                <a href="about.html" class="flex space-x-2 items-center block py-3 px-5 text-sm text-gray-500 hover:text-violet-600">
+                    <!-- <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg> -->
+                    <h3>Work</h3>
+                </a>
+                <a href="#work" class="flex space-x-2 block py-3 px-5 text-sm text-gray-500 hover:text-violet-600">
+                    <!-- <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> -->
+                    <h3>About</h3>
+                </a>
+                <a href="notes.html" class="flex space-x-2 block py-3 px-5 text-sm text-gray-500 hover:text-violet-600">
+                    <!-- <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg> -->
+                    <h3>Resume</h3>
+                </a>
+            </div>
+        </nav>
+        
+    <!--header section-->
+    <section class="mt-4 md:mt-12 px-6 md:px-4 max-w-4xl bg-white mx-auto border-b border-gray-200 ">
+        <div class="space-y-4 md:space-y-8">
+        <h1 class="text-2xl leading-normal md:text-4xl md:leading-tight ">
+            A digital product designer 
+            <!-- <a href="about.html" class=""><span class="transition ease-in-out duration-600 hover:text-violet-600 ">Gunasethu</span></a> -->
+            <!-- , a product designer currently designing noice experiences at <a href="https://www.headout.com/" target="_blank" class=""><span class="transition ease-in-out duration-600  hover:text-violet-600">Headout</span></a>. -->
+        </h1>
+        <p class="text-lg text-gray-600 leading-relaxed md:text-2xl md:leading-normal">
+            Based out of Tamilnadu. Previously designed for farmers at <a href="https://nurture.farm/">nurture.farm</a>  and before that I interned
+        at <a href="https://m2pfintech.com/">M2P Fintech.</a> </p>
+        <p class="flex items-center py-4 md:leading-normal space-x-2 text-lg text-gray-600 md:text-lg ">
+            Here's some of my recent and best works ↓
+        </p>
+        </div>
+    </section>
+    <!--Work section-->
+    <section id="work" class="my-8 md:my-8  ">
+        <!-- <h1 class="mb-6 md:mb-10 text-xl px-6 max-w-4xl bg-white mx-auto md:px-4  md:text-3xl">Featured Work</h1> -->
+        <!--individual work wrap-->
+        <div class="space-y-12 md:space-y-16">
+        <div class="space-y-8 md:space-y-12  px-6 max-w-4xl bg-white mx-auto md:px-4  md:text-3xl">
+            <div class="space-y-1 md:space-y-2">
+                <img src="Images/nurture.png" alt="" class="w-full rounded	">
+            <h1 class="text-lg md:text-xl pt-3">Work at Nurture.farm</h1>
+            <p class="text-base text-gray-600 pt-2 md:text-base">Designed for 80k farmers to increase buying conversation rate and helping provide better ordering experience.
+            </p>
+            <a href="./nurture.html" class="flex pt-4">
+                <button type="button" class="inline-block px-4 py-2 bg-blue-600 text-white font-normal text-base leading-tight rounded-full hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read case study</button>
+
+                <!-- rectange button <button type="button"  class="inline-block mt-4 px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read case study</button> -->
+                <!-- text CTA <h3 class="text-base md:text-xl border-b border-gray-600 hover:text-violet-600 hover:border-violet-600">Get in touch</h3> -->
+            </a>
+            
+            </div>
+            
+        </div> 
+        <div class="space-y-8 md:space-y-12 px-6 max-w-4xl bg-white mx-auto md:px-4  md:text-3xl">
+            <div class="space-y-1 md:space-y-2">
+                <img src="Images/m2p-cover.png" alt="" class="w-full rounded	">
+            <h1 class="text-lg md:text-xl pt-3">Work at m2p</h1>
+            <p class="text-base text-gray-600 pt-2 md:text-base">An end-to-end visual redesign of a portal with goal of increasing customer satisfaction, engagement, effectivenss and loyality.
+            </p>
+            <a href="./m2p.html" class="flex pt-4">
+                <button type="button" class="inline-block px-4 py-2 bg-blue-600 text-white font-normal text-base leading-tight rounded-full hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read case study</button>
+
+                <!-- rectange button <button type="button"  class="inline-block mt-4 px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read case study</button> -->
+                <!-- text CTA <h3 class="text-base md:text-xl border-b border-gray-600 hover:text-violet-600 hover:border-violet-600">Get in touch</h3> -->
+            </a>
+            
+            </div>
+            
+        </div> 
+     
+    </div>
+    
+    </section>
+
+    <!--notes section
+    <section id="notes" class="my-16 md:my-20 border-b border-gray-200">
+        <div class=" mb-6 md:mb-10 flex px-6 max-w-4xl bg-white mx-auto md:px-4  justify-between items-center">
+            <h1 class="text-xl  md:text-3xl">Random Notes</h1>
+            <a href="notes.html" class=""><h3 class="text-sm md:text-base border-b border-gray-600 hover:text-violet-600 hover:border-violet-600">View more</h3>
+            </a>
+        </div> -->
+            <!--individual notes wrap
+        <div class=" space-y-8 md:space-y-12 pb-8 md:pb-12 px-6 max-w-4xl bg-white mx-auto md:px-4  md:text-3xl">
+        <div class="space-y-1 md:space-y-2">
+            <h1 class="text-lg md:text-2xl">Internship Experience</h1>
+            <p class="text-base text-gray-600 md:text-xl">27th July 2021
+            </p>
+            <a href="intern.html" class="flex ">
+                <h3 class="text-base md:text-xl border-b border-gray-600 hover:text-violet-600 hover:border-violet-600">Read</h3>
+            </a>
+        </div>
+        <div class="space-y-1 md:space-y-2">
+            <h1 class="text-lg md:text-2xl">Design Journey so far</h1>
+            <p class="text-base text-gray-600 md:text-xl">2nd April 2021
+            </p>
+            <a href="design.html" class="flex">
+                <h3 class="text-base md:text-xl border-b border-gray-600 hover:text-violet-600 hover:border-violet-600">Read</h3>
+            </a>
+        </div>
+        </div>
+    </section> -->
+    
+   <!--  People
+    <section id="people" class="my-16 pb-8 md:pb-12  md:my-20 my-2 border-b border-gray-200 ">
+        <h1 class=" mb-6 md:mb-10 text-xl px-6 max-w-4xl bg-white mx-auto md:px-4  md:text-3xl">Hear from people I have worked with...</h1>
+        <div class="space-y-8 md:space-y-12  px-6 max-w-4xl bg-white mx-auto md:px-4  md:text-3xl">
+            <div class=" space-y-4 max-w-2xl">
+                <p class="text-base md:text-lg ">Anurag has a great work ethic. He is able to dissect the difference between an essential and a good to have option in the design process. His speed with his craft and sincerity are surely his strong suits. He has also grown in terms of understanding the problem space and coming up with solutions.
+                </p>
+                <div class="flex items-center space-x-2 md:space-x-4">
+                    <img src="images/lava.png" alt="" class="h-12 md:h-16 rounded-full">
+                    <div class="">
+                        <h1 class="text-base md:text-lg text-gray-600">Lavanya Gopal </h1>
+                        <p class="text-base md:text-lg text-gray-600">UX Designer, Zeta
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" space-y-4  max-w-2xl">
+                <p class="text-base md:text-lg ">Anurag is always shipping and learning on the go. He’s someone who knows how to get shit done and also deliver quality design. He surely understands the importance of speed in a fast-moving startup and he’s great at communicating through his design….and his memes
+                </p>
+                <div class=" flex items-center space-x-2 md:space-x-4">
+                    <img src="images/niket.jpg" alt="" class="h-12 md:h-16 rounded-full">
+                    <div class="">
+                        <h1 class="text-base md:text-lg text-gray-600">Niket Kamat Satoskar                    </h1>
+                        <p class="text-base md:text-lg text-gray-600">Product Designer, Juno
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        
+    </section> -->
+    
+    <!--Contact-->
+    <section id="contact" class="  mt-16 md:mt-20 mb-6 ">
+        <!-- <h1 class=" mb-6 md:mb-8 text-xl   px-6 max-w-4xl bg-white mx-auto md:px-4  md:text-3xl">Thanks for <s>stalking</s> dropping by</h1> -->
+        <div class="border-t border-gray-200 py-4 space-y-2 md:space-y-0 md:flex md:space-x-4 px-6 text-sm max-w-4xl bg-white mx-auto md:px-4  md:text-base">
+           <!--  <a href="https://twitter.com/anuragkrishh" target="_blank" class="flex ">
+                <h3 class="text-sm md:text-base border-b border-gray-600 hover:text-violet-600 hover:border-violet-600">Bird App</h3>
+            </a> -->
+            
+            <a href="https://twitter.com/Gunasethu197" target="_blank" class="flex ">
+                <h3 class="text-sm md:text-base hover:text-violet-600 hover:border-violet-600">Twitter</h3>
+            </a>
+            <a href="https://www.linkedin.com/in/gunasethu/" target="_blank" class="flex ">
+                <h3 class="text-sm md:text-base hover:text-violet-600 hover:border-violet-600">LinkedIn</h3>
+            </a>
+            <a href="mailto: gunasethu@gmail.com" target="_blank" class="flex ">
+                <h3 class="text-sm md:text-base hover:text-violet-600 hover:border-violet-600">gunasethu197@gmail.com</h3>
+            </a>
+        </div>
+    </section>
+    <footer class="py-6 ">
+        <div class="space-y-2 md:space-y-0 md:flex px-6 max-w-4xl bg-white mx-auto md:px-4 justify-between">
+        <h3 class="text-sm md:text-base">© Gunasethu</h3>
+        <!-- <h3 class="text-sm md:text-base">Made with coffee and a pinch of imposter syndrome    </h3> -->
+    </div>
+    </footer>
+    <script>
+        function myFunction() {
+        var x = document.getElementById("mobile-menu");
+        var ham = document.getElementById("ham-icon");
+        var close = document.getElementById("close-icon");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            ham.style.display = "none";
+            close.style.display = "block";
+        } else {
+            x.style.display = "none";
+            ham.style.display = "block";
+            close.style.display = "none";
+        }
+        }     
+    </script>
+    
+    </body>
+</html>

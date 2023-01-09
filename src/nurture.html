@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nurture farm</title>
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="icon" type="image/x-icon" href="Images/nurture-farm icon.jpeg">
+</head>
+<body onload="daysDifference()" data-new-gr-c-s-check-loaded="14.1087.0" data-gr-ext-installed="" class="font-inter">
+    <!--navbar-->
+        <nav class="md:border-gray-200 md:border-b">
+            <div class="max-w-4xl mx-auto px-4 md:px-4 border-gray-200 border-b md:border-0">
+                <div class="flex justify-between">
+                    
+                    <div class="flex space-x-2 md:space-x-4">
+                        <a class="flex items-center py-5 px-2 md:px-0 text-gray-700 hover:text-gray-900" href="index.html">
+                            <h1 class=" text-lg md:text-xl border-violet-600">gunasethu</h1>
+                        </a>
+                        <!-- no of days since started design -->
+                        <!--   <div class="justify-center my-8 select-none flex"> 
+                            
+                                <a href="#" class="transition duration-150 ease-in-out" data-bs-toggle="tooltip" title="No of days since I started my design journey (first internship). As a reminder of how far I have come :)">
+                                <h3 id="result" class="py-2 px-3 no-underline rounded-full bg-blue text-purple-900 text-xs bg-purple-200">843 days</h3>
+    
+                                </a>
+                          </div> -->
+                    </div>
+                        
+                    
+    
+                    <div class="hidden md:flex items-center space-x-1 transition ease-in-out duration-300 ">
+                        <a href="index.html" class="flex space-x-2 item py-5 px-3 text-gray-500 hover:text-violet-600 text-sm">
+                            <!-- <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg> -->
+                            <h3>Work</h3>
+                        </a>
+                        <a href="#work" class="flex space-x-2 py-5 px-3 text-gray-500 hover:text-violet-600 text-sm">
+                            <!-- <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> -->
+                            <h3>About</h3>
+                        </a>
+                        <a href="notes.html" class="flex space-x-2 py-5 px-3 text-gray-500 hover:text-violet-600 text-sm">
+                            <!-- <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg> -->
+                            <h3>Resume</h3>
+                        </a>
+                    </div>
+                    <div class="mobile-menu-button md:hidden flex items-center">
+                        <button onclick="myFunction()">
+                            <svg class="w-6 h-6" id="ham-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                            <svg class="w-6 h-6" id="close-icon" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu" style="display:none;" class="py-2 transition ease-in-out duration-300 m-3 border rounded-md">
+                <a href="about.html" class="flex space-x-2 items-center block py-3 px-5 text-sm text-gray-500 hover:text-violet-600">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                    <h3>About</h3>
+                </a>
+                <a href="#work" class="flex space-x-2 block py-3 px-5 text-sm text-gray-500 hover:text-violet-600">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <h3>Work</h3>
+                </a>
+                <a href="notes.html" class="flex space-x-2 block py-3 px-5 text-sm text-gray-500 hover:text-violet-600">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                    <h3>Notes</h3>
+                </a>
+            </div>
+        </nav>
+        
+    <!--header section-->
+    <section class="mt-4 md:mt-12 px-6 md:px-4 max-w-4xl bg-white mx-auto ">
+        <div class="space-y-2">
+        <h1 class="text-2xl leading-normal md:text-3xl md:leading-tight ">
+           Work at nurture farm
+        </h1>
+    
+        <p class="text-base pt-4 text-gray-600"> Role: Associate product designer </p>
+        <p class="text-base -mt-2px text-gray-600 "  style="margin-top: -0.2px;">5 months</p>
+        <h1 class="pt-4 text-xl">Designing for 80k farmers to increase buying conversation rate and helping provide better ordering experience</h1>
+        </div>
+        
+        <img src="Images/cover.png" alt="" class="pt-4 md:block">
+    </section>
+    
+    <section class="mt-4 md:mt-8 px-6 md:px-4 max-w-4xl bg-white mx-auto ">
+        <!-- <h1 class="pt-4 text-xl">M2P forex management platform </h1> -->
+        <p class="text-base pt-4 md:text-base" >nurture farm has a commerce platform(app) called nurture.retail that allows Agri-input retailers and dealers to buy pesticides (insecticides, herbicides, fungicides), fertilizers, agriculture tools, and other crop protection products directly from the manufacturers at best prices. </p>
+        <p class="text-base pt-4 md:text-base" >It is India's fastest-growing farm commerce app bringing in a new age Agri input marketplace to 80,000 retailers by providing a complete range of Agritech solutions to farmers through mobile.</p>
+        <p class="text-base pt-4 md:text-base" >I joined the design team as an Associate Product Designer in July 2022. My work involves mostly improving the engagement, retention, and cart experience of the app.</p>
+
+                
+        <img src="Images/chart.png" alt="" class="mt-12 md:block">
+        <p class="text-base pt-4 mt-4 md:text-base" >We received a data which shows large number of people has queries on how to fill general info, basic info. We had a prioritized internally and  decided to solve for product availability and how to use the app since these are highly impactful and which will also bring high retention rate to the business</p>
+                
+        <!-- Goals -->
+        <h1 class="pt-4 text-xl">Goals</h1>
+        <ul style="list-style-type: disc; padding-top: 8px; list-style-position: inside;">
+            <li >Solving the issues with product availability (users not finding right products)</li>
+            <li>Helping people educate “how to use the app”</li>
+        </ul>
+        
+        <h1 class="pt-4 text-xl"> Helping people find right products </h1>
+        <p class="text-base pt-4 md:text-base"> Forget people whether ordering or not, most of them are not even able to find the right products they wanted that are on the app.</p>
+        
+        <p class="text-base pt-4 md:text-base">Common Queries majorly include:</p>
+        <ul style="list-style-type: disc; padding-top: 8px; list-style-position: inside;">
+            <li >....Is product X listed on nurture retail app?</li>
+            <li>....Where do I find latest products in the app?</li>
+        </ul>
+        <p class="text-base pt-4 md:text-base">In order of to solve these problems, PM had a outline idea of how to solve the problems</p>
+        
+        <h1 class="pt-4 text-xl" style="padding-top: 24px;"> Objectives:</h1>
+        <ul style="list-style-type: disc; padding-top: 8px; list-style-position: inside;">
+            <li >Improve search to increase discovery of products</li>
+            <li>Improve discovery of new products</li>
+        </ul>
+        
+        <!-- How can we increase the discovery of products -->
+        <h1 class="pt-4 text-xl"> How can we increase the discovery of products </h1>
+        <p class="text-base pt-4 md:text-base"> Our PM showed a data which indicated that almost 30% of the users use “Search” everyday to find the products they want. We looked at the data how the search is performing, we found that out of 30% of these searches 20% are Null Searches (doesnt return any results).</p> 
+        <img src="Images/existing search flow.png" alt="" class="pt-4 md:block">
+        <p class="text-base pt-4 md:text-base">The number of queries on search we receive are high because the system triggers a search at every character (show results as you type). We want to reduce the null searches and the total number of search queries that the system handles. </p>
+        <img src="Images/data 1.png" alt="" class="pt-4 md:block">
+        <img src="Images/data2.png" alt="" class="pt-4 md:block">
+        <p class="text-base pt-4 md:text-base">More than 85% of queries can be resolved by adding, removing, or replacing just 1 character from the search results.</p>
+        <p class="text-base pt-4 md:text-base">To solve this, the PM suggested in implementing “Elastic search” that will showing suggestions replacing, adding or removing to 1 or 2 characters in the typed phrase, to show corresponding results.</p>  
+        <img src="Images/apps.png" alt="" class="pt-4 md:block">
+        <p class="text-base pt-4 md:text-base">To integrate the elastic search with search, first I wanted to study & understand other apps search functionality works on successful apps. I decided to stick with only ecommerce and food apps because that’s where our app falls in. Ex: Jiomart, Blinkit, Zepto, Flipkart, Amazon</p>  
+        <img src="Images/userflow.png" alt="" class="pt-4 md:block">
+        <p class="text-base pt-4 md:text-base">First defined the logic on how the flow should work. In order to show right suggestions and reduce the number of loading time, we decided to show the suggestions list like how google search does instead of triggering search while you’re typing.</p>
+        <p class="text-base pt-4 md:text-base">We also had data that users search try searching through techical details of the products such pesticides, fertilizers etc(Ex: ammonia, chrolide). Similar to how we search “18GB RAM mobile” in flipkart or amazon. The search data is high so we wanted to find a way to help users search through technical details.</p>
+        <img src="Images/rejected.png" alt="" class="pt-4 md:block">
+        <p class="text-base pt-4 md:text-base">I tried different ways to present the results and in my attempts, I found that each iteration resulted in a more cluttered and visually overwhelming. The more the information is added, the more it gets complicated. Finally I ended up with the separating them two in separate heading with relevant searches below each.</p>
+        <img src="Images/approved.png" alt="" class="pt-4 md:block">
+        <p class="text-base pt-4 md:text-base">At the end, we finally landed up on something that was more familiar and brings much easier to understand with less learning curve.</p>
+
+        <!-- Objective 2 -->
+        <h1 class="pt-4 mt-4 text-xl">Objective 2: How to effectively educate users on how to use the app</h1>
+        <p class="text-base pt-4 md:text-base"> We have received x of queries stating that people don’t know how to place an order and struggling understanding the app. Queries majorly include: How to place an order and Want to know more about the retail app. </p>
+        
+        <h1 class="pt-4 text-xl" style="padding-top: 24px;"> We thought of providing Improving the in-app guidance:</h1>
+        <ul style="list-style-type: disc; padding-top: 8px; list-style-position: inside;">
+            <li >Better visibility to the tutorial video on app (Also include link as part of the welcome message)</li>
+            <li>Coach marks on the app</li>
+        </ul>
+
+        <p class="text-base pt-4 md:text-base"> It was expected problem as usually Farmers are not tech savvy and doesn’t have much digital literacy One of ways to educate people that we thought is through providing informational and helpful tutorial videos. We already had tutorial section in the app. But it was not very well designed and received poor engagement from the users. </p>
+        <img src="Images/currentdesign.png" alt="" class="pt-4 md:block">
+        <h1 class="pt-4 text-xl" style="padding-top: 24px;"> Problems with current design</h1>
+        <ul style="list-style-type: disc; padding-top: 8px; list-style-position: inside;">
+            <li >Lack of structured content to discovery tutorial videos</li>
+            <li>Unable to see newly launched updated videos or features</li>
+        </ul>
+        <img src="Images/rejected2.png" alt="" class="pt-4 md:block">
+        <p class="text-base pt-4 md:text-base"> We iterated through layouts and structure with the goal of achieving best way of presenting information. Some of the designs looked best in initially, but seems not feasible if the videos are large and scaled.</p>
+        <img src="Images/approved2.png" alt="" class="pt-4 md:block">
+        <p class="text-base pt-4 md:text-base">Finally we settled up on the above design which seemed not taking up much space but also has enough information for the user to find videos. </p>
+        <h1 class="pt-4 text-xl" style="padding-top: 24px;"> Coach marks as first touchpoint </h1>
+        <p class="text-base pt-4 md:text-base">As part of the educating the users,  we also included coachmarks when the user enters the new flow, discovers new features and make it easy to use the app. </p>
+        <img src="Images/coachmark.png" alt="" class="pt-4 md:block">
+    
+        <!-- Conclusion -->
+        <h1 class="pt-4 mt-4 text-xl">Conclusion</h1>
+        <p class="text-base pt-4 md:text-base">Due to some business reasons, the project was put on hold before develpment and then I was moved to different project. So I was not able to see the redesign go live. </p>
+        <p class="text-base pt-4 md:text-base">Looking back, I've come to understand how crucial it is to sweat even the smallest aspects because doing so might make the users work so much simpler. I also learned from this experience how to communicate early and to ask any questions or doubts I may have had through the process.</p>
+
+    </section>
+
+    <!--Contact-->
+    <section id="contact" class="  mt-16 md:mt-20 mb-6 ">
+        <!-- <h1 class=" mb-6 md:mb-8 text-xl   px-6 max-w-4xl bg-white mx-auto md:px-4  md:text-3xl">Thanks for <s>stalking</s> dropping by</h1> -->
+        <div class="border-t border-gray-200 py-4 space-y-2 md:space-y-0 md:flex md:space-x-4 px-6 text-sm max-w-4xl bg-white mx-auto md:px-4  md:text-base">
+           <!--  <a href="https://twitter.com/anuragkrishh" target="_blank" class="flex ">
+                <h3 class="text-sm md:text-base border-b border-gray-600 hover:text-violet-600 hover:border-violet-600">Bird App</h3>
+            </a> -->
+            
+            <a href="https://twitter.com/Gunasethu197" target="_blank" class="flex ">
+                <h3 class="text-sm md:text-base hover:text-violet-600 hover:border-violet-600">Twitter</h3>
+            </a>
+            <a href="https://www.linkedin.com/in/gunasethu/" target="_blank" class="flex ">
+                <h3 class="text-sm md:text-base hover:text-violet-600 hover:border-violet-600">LinkedIn</h3>
+            </a>
+            <a href="mailto: gunasethu@gmail.com" target="_blank" class="flex ">
+                <h3 class="text-sm md:text-base hover:text-violet-600 hover:border-violet-600">gunasethu197@gmail.com</h3>
+            </a>
+        </div>
+    </section>
+    <footer class="py-6 ">
+        <div class="space-y-2 md:space-y-0 md:flex px-6 max-w-4xl bg-white mx-auto md:px-4 justify-between">
+        <h3 class="text-sm md:text-base">© Gunasethu</h3>
+        <!-- <h3 class="text-sm md:text-base">Made with coffee and a pinch of imposter syndrome    </h3> -->
+    </div>
+    </footer>
+    <script>
+        function myFunction() {
+        var x = document.getElementById("mobile-menu");
+        var ham = document.getElementById("ham-icon");
+        var close = document.getElementById("close-icon");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            ham.style.display = "none";
+            close.style.display = "block";
+        } else {
+            x.style.display = "none";
+            ham.style.display = "block";
+            close.style.display = "none";
+        }
+        }     
+    </script>
+    
+    </body>
+</html>
