@@ -86,86 +86,76 @@
     
     <section class="mt-4 md:mt-8 px-6 md:px-4 max-w-4xl bg-white mx-auto ">
         <!-- <h1 class="pt-4 text-xl">M2P forex management platform </h1> -->
-        <p class="text-base pt-4 md:text-base" >nurture farm has a commerce platform(app) called nurture.retail that allows Agri-input retailers and dealers to buy pesticides (insecticides, herbicides, fungicides), fertilizers, agriculture tools, and other crop protection products directly from the manufacturers at best prices. </p>
-        <p class="text-base pt-4 md:text-base" >It is India's fastest-growing farm commerce app bringing in a new age Agri input marketplace to 80,000 retailers by providing a complete range of Agritech solutions to farmers through mobile.</p>
-        <p class="text-base pt-4 md:text-base" >I joined the design team as an Associate Product Designer in July 2022. My work involves mostly improving the engagement, retention, and cart experience of the app.</p>
+        <p class="text-base pt-4 md:text-base" >nurture farm has a commerce app which brings in a new age Agri-input marketplace to 80,000 retailers. This app allows Agri-input retailers and dealers to buy pesticides, fertilizers, agriculture tools, and other crop protection products directly from the manufacturers at best prices. </p>
+        <p class="text-base pt-4 md:text-base" >I joined the design team as an Associate Product Designer in July 2022. My work involves mostly improving the engagement, retention, and cart experience of the app. I have worked on multiple tasks, but here I'll be focusing on two problems that I solved for</p>
 
-                
-        <img src="Images/chart.png" alt="" class="mt-12 md:block">
-        <p class="text-base pt-4 mt-4 md:text-base" >We received a data which shows large number of people has queries on how to fill general info, basic info. We had a prioritized internally and  decided to solve for product availability and how to use the app since these are highly impactful and which will also bring high retention rate to the business</p>
-                
-        <!-- Goals -->
-        <h1 class="pt-4 text-xl">Goals</h1>
-        <ul style="list-style-type: disc; padding-top: 8px; list-style-position: inside;">
-            <li >Solving the issues with product availability (users not finding right products)</li>
-            <li>Helping people educate “how to use the app”</li>
-        </ul>
         
-        <h1 class="pt-4 text-xl"> Helping people find right products </h1>
-        <p class="text-base pt-4 md:text-base"> Forget people whether ordering or not, most of them are not even able to find the right products they wanted that are on the app.</p>
+        <!-- Problem statement -->
+        <h1 class="mt-12 text-xl" style="font-weight: bold;">Problem Statement #1</h1>
+        <p class="text-base pt-4 md:text-base ">Search is one of the primary ways that people use to find products in the app. With just a few taps, you can quickly find the product you want. Recently, we also introduced voice search feature to make the search process even more convenient and faster, which has been very successful and has been well-received by users.</p>
         
-        <p class="text-base pt-4 md:text-base">Common Queries majorly include:</p>
-        <ul style="list-style-type: disc; padding-top: 8px; list-style-position: inside;">
-            <li >....Is product X listed on nurture retail app?</li>
-            <li>....Where do I find latest products in the app?</li>
-        </ul>
-        <p class="text-base pt-4 md:text-base">In order of to solve these problems, PM had a outline idea of how to solve the problems</p>
         
-        <h1 class="pt-4 text-xl" style="padding-top: 24px;"> Objectives:</h1>
-        <ul style="list-style-type: disc; padding-top: 8px; list-style-position: inside;">
-            <li >Improve search to increase discovery of products</li>
-            <li>Improve discovery of new products</li>
-        </ul>
+        <h1 class="mt-4 text-xl" style="padding-top: 16px; font-weight: bold;"> What was the problem? </h1>
+        <p class="text-base pt-4 md:text-base"> 30% of the users use the search feature every day. Out of these searches, 20% don't return any results. Additionally, the system is set up to trigger a search for every character typed, which is causing a large number of search queries. The goal is to decrease the number of searches that don't return any results and to reduce the total number of search queries the system handles.</p>
+
+        <h1 class="mt-4 text-xl" style="padding-top: 16px; font-weight: bold;">Why did null searches occur? </h1>
+        <p class="text-base pt-4 md:text-base"> With our current logic of how our search functions, it was not flexible enough that user’s were not getting the right search results when they perform search. Even a small mistakes like 1 letter misspell, adding hyphen/space/colon, 1 letter missing would not return the right results. </p>
+        <p class="text-base pt-4 md:text-base"> This was particularly higher in recent times with more new products being added in the app and some of product names are difficult to remember - so users might not recall the right spelling of the products. This resulted in users leaving the app thinking that the product is unavailable while, in fact, the app was unable to provide relevant search results. </p>
         
-        <!-- How can we increase the discovery of products -->
-        <h1 class="pt-4 text-xl"> How can we increase the discovery of products </h1>
-        <p class="text-base pt-4 md:text-base"> Our PM showed a data which indicated that almost 30% of the users use “Search” everyday to find the products they want. We looked at the data how the search is performing, we found that out of 30% of these searches 20% are Null Searches (doesnt return any results).</p> 
-        <img src="Images/existing search flow.png" alt="" class="pt-4 md:block">
-        <p class="text-base pt-4 md:text-base">The number of queries on search we receive are high because the system triggers a search at every character (show results as you type). We want to reduce the null searches and the total number of search queries that the system handles. </p>
         <img src="Images/data 1.png" alt="" class="pt-4 md:block">
         <img src="Images/data2.png" alt="" class="pt-4 md:block">
-        <p class="text-base pt-4 md:text-base">More than 85% of queries can be resolved by adding, removing, or replacing just 1 character from the search results.</p>
-        <p class="text-base pt-4 md:text-base">To solve this, the PM suggested in implementing “Elastic search” that will showing suggestions replacing, adding or removing to 1 or 2 characters in the typed phrase, to show corresponding results.</p>  
+
+        <h1 class="mt-12 text-xl" style="font-weight: bold;">The approach - Introducing Elastic search </h1>
+        <p class="text-base pt-4 md:text-base"> More than 85% of queries can be resolved by adding, removing, or replacing just 1 character from the search results. I had an elaborate discussion with PM and we thought of integrating ‘Elastic search’ to correctly identify the typed phrase in case of common errors. It can be able to achieve fast search responses because instead of searching the text directly, it searches an index. So we help everyone find what they need faster.</p>
+        <p class="text-base pt-4 md:text-base"> We discussed on all the technical logics on how it should function, but here I am not gonna get into everything and try to keep it short for easy understanding.</p>
+
+        <img src="Images/existing search flow.png" alt="" class="pt-4 md:block">
+        <p class="text-base pt-4 md:text-base"> The problem with that is each time a character is typed the system triggers the search and shows the results which is not efficient way as it calls multiple times from the backend.</p>
+
+        <h1 class="mt-12 text-xl" style="font-weight: bold;">Secondary study</h1>
+        <p class="text-base pt-4 md:text-base"> First I wanted to study & understand how the search functionality of most successful apps works.  EX: Jiomart, Blinkit, Zepto, Flipkart, Amazon. Through this I was able to understand that each app has its own specific approach to how their search functionality operates, as it's understandable that each app has different products and customers have different preferences on what to search.</p>
         <img src="Images/apps.png" alt="" class="pt-4 md:block">
-        <p class="text-base pt-4 md:text-base">To integrate the elastic search with search, first I wanted to study & understand other apps search functionality works on successful apps. I decided to stick with only ecommerce and food apps because that’s where our app falls in. Ex: Jiomart, Blinkit, Zepto, Flipkart, Amazon</p>  
+       
+        <h1 class="mt-12 text-xl" style="font-weight: bold;">Defining the logic for our search</h1>
+        <p class="text-base pt-4 md:text-base"> I had discussion with the PM and we defined the logic on how the flow should work. In order to show right suggestions and reduce the number of loading time, we decided to show the suggestions list like how google search does - instead of triggering search while you’re typing.</p>
+        <p class="text-base pt-4 md:text-base"> We also had data that users search try searching through technical details of the products such pesticides, fertilizers etc(Ex: ammonia, chrolide). Similar to how we search “18GB RAM mobile” in flipkart or amazon. </p>
+        
         <img src="Images/userflow.png" alt="" class="pt-4 md:block">
-        <p class="text-base pt-4 md:text-base">First defined the logic on how the flow should work. In order to show right suggestions and reduce the number of loading time, we decided to show the suggestions list like how google search does instead of triggering search while you’re typing.</p>
-        <p class="text-base pt-4 md:text-base">We also had data that users search try searching through techical details of the products such pesticides, fertilizers etc(Ex: ammonia, chrolide). Similar to how we search “18GB RAM mobile” in flipkart or amazon. The search data is high so we wanted to find a way to help users search through technical details.</p>
+
+        <h1 class="mt-12 text-xl" style="font-weight: bold;">Iterations....</h1>
+        <p class="text-base pt-4 md:text-base"> I tried various ways to present the results for easier understanding and in my attempts, I found that each iteration resulted in a more cluttered and visually overwhelming. The more the information is added, the more it gets complicated. I started showing these around to the folks at nurture farm and they also felt the same way.</p>
         <img src="Images/rejected.png" alt="" class="pt-4 md:block">
-        <p class="text-base pt-4 md:text-base">I tried different ways to present the results and in my attempts, I found that each iteration resulted in a more cluttered and visually overwhelming. The more the information is added, the more it gets complicated. Finally I ended up with the separating them two in separate heading with relevant searches below each.</p>
+        
+        <h1 class="mt-12 text-xl" style="font-weight: bold;">What we landed on</h1>
+        <p class="text-base pt-4 md:text-base"> Finally, I ended up with the separating them two in separate heading with relevant searches below each. This design felt more familiar and brings much easier understanding with less learning curve.</p>
         <img src="Images/approved.png" alt="" class="pt-4 md:block">
-        <p class="text-base pt-4 md:text-base">At the end, we finally landed up on something that was more familiar and brings much easier to understand with less learning curve.</p>
 
-        <!-- Objective 2 -->
-        <h1 class="pt-4 mt-4 text-xl">Objective 2: How to effectively educate users on how to use the app</h1>
-        <p class="text-base pt-4 md:text-base"> We have received x of queries stating that people don’t know how to place an order and struggling understanding the app. Queries majorly include: How to place an order and Want to know more about the retail app. </p>
-        
-        <h1 class="pt-4 text-xl" style="padding-top: 24px;"> We thought of providing Improving the in-app guidance:</h1>
+        <!-- Problem statement #2  -->
+
+        <h1 class="mt-12 text-xl" style="font-weight: bold;">Problem Statement #2</h1>
+        <p class="text-base pt-4 md:text-base">I was asked to rework on the current tutorial page of the app as we have received more number of queries stating that some of the users don’t know how to do basic things like placing an order, completing the KYC and were struggling to understand the app.</p>
+        <p class="text-base pt-4 md:text-base">It was an anticipated issue as many farmers are not technologically proficient and may have limited digital literacy. We believed that one way to educate them was by providing informational and helpful tutorial videos. We already had a tutorial section in the app, but it was not well-designed and did not generate much engagement from users.</p>
+
+        <h1 class="pt-4 text-xl" style="padding-top: 24px; font-weight: bold;"> Issues with current tutorial design</h1>
         <ul style="list-style-type: disc; padding-top: 8px; list-style-position: inside;">
-            <li >Better visibility to the tutorial video on app (Also include link as part of the welcome message)</li>
-            <li>Coach marks on the app</li>
+            <li >Lack of structured content to discover videos</li>
+            <li>Lack of focus on newly launched tutorial videos for new features</li>
+            <li>Progressive disclosure will hide the thumbnail and fails to give some expectations for the users and also requires extra click to view.</li>
         </ul>
-
-        <p class="text-base pt-4 md:text-base"> It was expected problem as usually Farmers are not tech savvy and doesn’t have much digital literacy One of ways to educate people that we thought is through providing informational and helpful tutorial videos. We already had tutorial section in the app. But it was not very well designed and received poor engagement from the users. </p>
         <img src="Images/currentdesign.png" alt="" class="pt-4 md:block">
-        <h1 class="pt-4 text-xl" style="padding-top: 24px;"> Problems with current design</h1>
-        <ul style="list-style-type: disc; padding-top: 8px; list-style-position: inside;">
-            <li >Lack of structured content to discovery tutorial videos</li>
-            <li>Unable to see newly launched updated videos or features</li>
-        </ul>
-        <img src="Images/rejected2.png" alt="" class="pt-4 md:block">
-        <p class="text-base pt-4 md:text-base"> We iterated through layouts and structure with the goal of achieving best way of presenting information. Some of the designs looked best in initially, but seems not feasible if the videos are large and scaled.</p>
-        <img src="Images/approved2.png" alt="" class="pt-4 md:block">
-        <p class="text-base pt-4 md:text-base">Finally we settled up on the above design which seemed not taking up much space but also has enough information for the user to find videos. </p>
-        <h1 class="pt-4 text-xl" style="padding-top: 24px;"> Coach marks as first touchpoint </h1>
-        <p class="text-base pt-4 md:text-base">As part of the educating the users,  we also included coachmarks when the user enters the new flow, discovers new features and make it easy to use the app. </p>
-        <img src="Images/coachmark.png" alt="" class="pt-4 md:block">
-    
-        <!-- Conclusion -->
-        <h1 class="pt-4 mt-4 text-xl">Conclusion</h1>
-        <p class="text-base pt-4 md:text-base">This was my first time working with product managers and it was a new learning collaborating with them. Thanks to Ashutosh and Prashant singh for providing right feedbacks. This is still under development we’ll get to know the conversion once this goes live. </p>
-        
 
+        <h1 class="mt-12 text-xl" style="font-weight: bold;">Explorations</h1>
+        <p class="text-base pt-4 md:text-base">I wanted to try visual heavy approach of multiple videos with thumbnails shown as soon as user enters the tutorial page. So far we had only around 8 tutorial videos uploaded in the app. But this could change in immediate future as the team was planning to include detailed tutorials for every process such buying a product, making different payments, and other key functions etc.</p>
+        <p class="text-base pt-4 md:text-base">So to make it easier for the user to navigate, I wanted to categorize the page and make it efficient to discover videos once the user enters the page. So I asked the PM to create the names for the categories and made them as tab switching.</p>
+        <img src="Images/rejected2.png" alt="" class="pt-4 md:block">
+        <p class="text-base pt-4 md:text-base">I iterated through different layouts and structure with the goal of achieving best way of presenting the videos. Some of the designs looked best in initially, but seems not feasible if the videos are larger and scaled.</p>
+
+        <h1 class="mt-12 text-xl" style="font-weight: bold;">What we landed on</h1>
+        <p class="text-base pt-4 md:text-base">After considering various options, we finally decided on this design that effectively balances the need for minimal space usage with the provision of sufficient information for users to make informed decisions about what videos to watch. The design is specifically tailored to avoid overwhelming users with excessive information and to provide a clear and concise overview of the relevant details.</p>
+        <img src="Images/approved2.png" alt="" class="pt-4 md:block">
+
+        <h1 class="mt-12 text-xl" style="font-weight: bold;">Conclusion</h1>
+        <p class="text-base pt-4 md:text-base">My time at nurture farm has been a truly positive experience for me. The team was also very supportive and provided regular feedback on my work, which helped me to stay on track and make sure that my designs were meeting the needs of the users and the business.</p>
     </section>
 
     <!--Contact-->
